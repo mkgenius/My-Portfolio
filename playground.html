@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Playground</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: #4caf50;
+      }
+
+      .section {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+      video,
+      audio {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 10px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 10px;
+      }
+
+      input[type="file"],
+      input[type="date"],
+      input[type="time"] {
+        display: block;
+        margin: 10px auto;
+        padding: 10px;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      label {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        font-weight: bold;
+      }
+
+      .home-button {
+        display: block;
+        width: fit-content;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        background-color: #2e7d32;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 16px;
+      }
+
+      .home-button:hover {
+        background-color: #0b7dda;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Media & Elements Page</h1>
+
+    <div class="section">
+      <h2>Image</h2>
+      <img src="Images/img.jpg" alt="Sample Image" />
+    </div>
+
+    <div class="section">
+      <h2>Video</h2>
+      <video controls>
+        <source src="aud-vid/video.MP4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <div class="section">
+      <h2>Audio</h2>
+      <audio controls>
+        <source src="aud-vid/audio.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <div class="section">
+      <h2>Northwest University – City Campus (Map)</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.389421396037!2d8.51445637477081!3d12.00768998776413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae81e215155555%3A0x598dce520c4fdd8e!2sNorthwest%20University%2C%20Kano%20(State%20City%20Campus)!5e0!3m2!1sen!2sng!4v1689836655567!5m2!1sen!2sng"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+    </div>
+
+    <div class="section">
+      <h2>Upload & Pick Date/Time</h2>
+
+      <label for="file">Upload a File:</label>
+      <input type="file" id="file" name="file" />
+
+      <label for="date">Pick a Date:</label>
+      <input type="date" id="date" name="date" />
+
+      <label for="time">Pick a Time:</label>
+      <input type="time" id="time" name="time" />
+
+      <a href="index.html" class="home-button">⬅️ Go Back to Home</a>
+    </div>
+
+    <script>
+      // Alert when both date and time are picked
+      const dateInput = document.getElementById("date");
+      const timeInput = document.getElementById("time");
+
+      function checkAndAlert() {
+        const date = dateInput.value;
+        const time = timeInput.value;
+        if (date && time) {
+          alert("You picked:\nDate: " + date + "\nTime: " + time);
+        }
+      }
+
+      dateInput.addEventListener("change", checkAndAlert);
+      timeInput.addEventListener("change", checkAndAlert);
+    </script>
+  </body>
+</html>

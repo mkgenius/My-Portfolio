@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad | Portfolio</title>
+    <link rel="icon" href="Images/logo.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="toggle" onclick="toggleDarkMode()">🌙</button>
+    </nav>
+
+    <header>
+      <img src="Images/prof.JPG" alt="Profile Picture" class="profile-pic" />
+      <h1>Muhammad Kabir Adam</h1>
+      <p>Computer Science Student | Web Developer | Programmer</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I’m a Computer Science student and aspiring Front-End Developer
+        passionate about creating clean, modern, and responsive websites. I love
+        working with HTML, CSS, and JavaScript to bring ideas to life and
+        constantly improve my coding and design skills.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">Java</div>
+        <div class="skill">MySQL</div>
+      </div>
+    </section>
+
+    <section id="certificates">
+      <h2>Certificates</h2>
+      <div class="certificates">
+        <div class="certificate">
+          <a href="Images/html.jpg"
+            ><img src="Images/html.jpg" alt="HTML Certificate"
+          /></a>
+          <h4>HTML Certification</h4>
+        </div>
+        <div class="certificate">
+          <a href="Images/css.jpg"
+            ><img src="Images/css.jpg" alt="CSS Certificate"
+          /></a>
+          <h4>CSS Certification</h4>
+        </div>
+        <div class="certificate">
+          <a href="Images/js.jpg"
+            ><img src="Images/js.jpg" alt="JavaScript Certificate"
+          /></a>
+          <h4>JavaScript Certification</h4>
+        </div>
+        <div class="certificate">
+          <a href="Images/webdev.jpg"
+            ><img src="Images/webdev.jpg" alt="Web Development Certificate"
+          /></a>
+          <h4>Web Development</h4>
+        </div>
+        <div class="certificate">
+          <a href="Images/sql.jpg"
+            ><img src="Images/sql.jpg" alt=" MySQL Certificate"
+          /></a>
+          <h4>MySQL Certification</h4>
+        </div>
+        <div class="certificate">
+          <a href="Images/java.jpg"
+            ><img src="Images/java.jpg" alt="Java Certificate"
+          /></a>
+          <h4>Java Certification</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>A responsive site built with HTML, CSS. Hosted on GitHub Pages.</p>
+          <p><em>Live link coming soon</em></p>
+        </div>
+        <div class="project">
+          <h3>To-Do List App</h3>
+          <p>
+            A clean and responsive To-Do List built with HTML, CSS and
+            JavaScript. Easily add, manage, and track your daily tasks across
+            all devices.
+          </p>
+          <a href="Todolist.html">View Project</a>
+        </div>
+      </div>
+    </section>
+    <section id="playground">
+      <div class="button-container">
+        <button class="curved-button">
+          <a href="playground.html">Visit my Playground</a>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Feel free to reach out through any of the channels below:</p>
+      <div class="contact-icons">
+        <a href="tel:+2349124012132"><span>📞</span>Call</a>
+        <a href="https://wa.me/9124012132" target="_blank"
+          ><span>💬</span>WhatsApp</a
+        >
+        <a href="mailto:mkgenius94@gmail.com"><span>✉️</span>Email</a>
+        <a href="https://github.com/mkgenius" target="_blank">🐱 GitHub</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Muhammad Kabir Adam. All rights reserved.</p>
+    </footer>
+
+    <button class="scroll-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+      window.onscroll = () => {
+        document.querySelector(".scroll-top").style.display =
+          window.scrollY > 300 ? "block" : "none";
+
+        document.querySelectorAll("section").forEach((section) => {
+          const top = section.getBoundingClientRect().top;
+          if (top < window.innerHeight - 100) {
+            section.classList.add("visible");
+          }
+        });
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
