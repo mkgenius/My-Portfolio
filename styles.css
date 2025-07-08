@@ -173,6 +173,7 @@
         font-size: 22px;
         cursor: pointer;
         display: none;
+            text-align: center;
       }
 
       footer {
