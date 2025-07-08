@@ -63,7 +63,7 @@
 
         nav .links {
           flex-direction: row;
-          
+          width: 100%;
         }
 
         nav .links a {
